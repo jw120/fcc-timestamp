@@ -17,10 +17,9 @@
     "src-start": "node src/server.js",
 
     "// Build and run deployable version locally": "",
-    "build:dirs": "mkdir -p deploy",
-    "build:static": "cp static/* deploy/ && mv -f deploy/dot-gitignore deploy/.gitignore",
+    "build:static": "for f in static/*; do cp $f deploy/${f#static/deploy-}; done",
     "build:js": "cp src/*.js deploy/",
-    "build": "npm run build:dirs && npm run build:js && npm run build:static",
+    "build": "npm run build:js && npm run build:static",
     "local-install": "cd deploy && npm install",
     "local-start": "cd deploy && heroku local",
     "local-logs": "cd deploy && heroku logs",
