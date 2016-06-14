@@ -26,4 +26,14 @@ describe("parse", () => {
     expect(parse("1450137600")).to.deep.equal(exampleTS);
   });
 
+  it("Returns null for misspelled natural", () => {
+    expect(parse("Dfcember 15, 2015")).to.deep.equal(nullTS);
+  });
+
+  it("Returns null for out of range natural", () => {
+    expect(parse("December 15, 1965")).to.deep.equal(nullTS);
+  });
+
+
+
 });

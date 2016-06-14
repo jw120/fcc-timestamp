@@ -10,9 +10,11 @@ run within the deploy sub-directory (which is done automatically via the npm run
 
 * DONE Git checkin
 * DONE Add tests
+* watch video
 * Check date format output
 * Add / page
 * Add testing of server - for each mode below
+* Submit to fcc
 
 ## Ways to run
 

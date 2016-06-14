@@ -8,14 +8,12 @@
     "url": "git+https://github.com/jw120/fcc-timestamp"
   },
   "scripts": {
-
     "// Development build/test/run": "",
     "lint": "tslint -c tslint.json src/*.ts test/*.ts",
     "compile": "tsc",
     "test": "mocha",
     "test:watch": "npm run test -- --watch",
     "src-start": "node src/server.js",
-
     "// Build and run deployable version locally": "",
     "build:static": "for f in static/*; do cp $f deploy/${f#static/deploy-}; done",
     "build:js": "cp src/*.js deploy/",
@@ -23,7 +21,6 @@
     "local-install": "cd deploy && npm install",
     "local-start": "cd deploy && heroku local",
     "local-logs": "cd deploy && heroku logs",
-
     "// Deploy on Heroku": "",
     "deploy:commit": "cd deploy; if [[ `git status --porcelain` ]]; then git add `find . -maxdepth 1 -type f` && git commit -m 'pushing updates from parent'; fi",
     "deploy:push": "cd deploy && git push heroku master",
