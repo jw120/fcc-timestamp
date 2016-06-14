@@ -1,0 +1,15 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp microservice exercise for FreeCodeCamp",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+  },
+  "author": "Blake Johnston",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

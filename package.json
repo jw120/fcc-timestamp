@@ -1,0 +1,44 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp microservice exercise for FreeCodeCamp",
+  "main": "src/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jw120/fcc-timestamp"
+  },
+  "scripts": {
+
+    "// Development build/test/run": "",
+    "lint": "tslint -c tslint.json src/*.ts test/*.ts",
+    "compile": "tsc",
+    "test": "mocha",
+    "test:watch": "npm run test -- --watch",
+    "src-start": "node src/server.js",
+
+    "// Build and run deployable version locally": "",
+    "build:dirs": "mkdir -p deploy",
+    "build:static": "cp static/* deploy/ && mv -f deploy/dot-gitignore deploy/.gitignore",
+    "build:js": "cp src/*.js deploy/",
+    "build": "npm run build:dirs && npm run build:js && npm run build:static",
+    "clean": "rm -r deploy",
+    "local-install": "cd deploy && npm install",
+    "local-start": "echo TODO",
+
+    "// Deploy on Heroku": "",
+    "deploy:commit": "cd deploy; [[ `git status` ]] && git add `find . -maxdepth 1 -type f` && git commit -m 'pushing updates from parent'",
+    "deploy:push": "git subtree push --prefix deploy heroku master",
+    "deploy": "npm run deploy:commit && npm run deploy:push"
+  },
+  "author": "JW",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "tslint": "next",
+    "typescript": "next"
+  }
+}

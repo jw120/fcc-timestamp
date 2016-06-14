@@ -1,0 +1,29 @@
+import { expect } from "chai";
+
+import {parse, ParsedTimestamp} from "../src/timestamp";
+
+const nullTS: ParsedTimestamp = {
+  unix: null,
+  natural: null
+};
+
+const exampleTS: ParsedTimestamp = {
+  unix: 1450137600,
+  natural: "December 15, 2015"
+};
+
+describe("parse", () => {
+
+  it("Returns nulls for undefined input", () => {
+    expect(parse(undefined)).to.deep.equal(nullTS);
+  });
+
+  it("Matches given natural example", () => {
+    expect(parse("December 15, 2015")).to.deep.equal(exampleTS);
+  });
+
+  it("Matches given unix example", () => {
+    expect(parse("1450137600")).to.deep.equal(exampleTS);
+  });
+
+});
