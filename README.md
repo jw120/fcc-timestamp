@@ -2,7 +2,11 @@
 
 Very simple Express REST server implemented with TypeScript.
 
-Note - uses git as an rsync not source control
+Note - uses git as an rsync not source control.
+deploy has a separate .git
+In deploy/ need to
+git init .
+heroku create
 
 ## TODO
 
@@ -10,12 +14,7 @@ Note - uses git as an rsync not source control
 * DONE Add tests
 * Check date format output
 * Add / page
-
 * Add testing of server
-* Avoid lint errors in VS Code for duplicate // keys in package.json
-
-* Get to work on Heroku
-* Check heroku local to work in sub-tree
 
 ## Ways to run
 
@@ -29,7 +28,7 @@ npm run src-start (which does node src/server.js)
 npm run compile
 npm run build
 npm run local-install (which does npm install in the deploy directory)
-npm run local-start (which does heroku local...)
+npm run local-start (which does heroku local in the deploy directory)
 
 * Onto Heroku (after local deploy build is built)
 

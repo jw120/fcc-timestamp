@@ -21,13 +21,13 @@
     "build:static": "cp static/* deploy/ && mv -f deploy/dot-gitignore deploy/.gitignore",
     "build:js": "cp src/*.js deploy/",
     "build": "npm run build:dirs && npm run build:js && npm run build:static",
-    "clean": "rm -r deploy",
     "local-install": "cd deploy && npm install",
-    "local-start": "echo TODO",
+    "local-start": "cd deploy && heroku local",
+    "local-logs": "cd deploy && heroku logs",
 
     "// Deploy on Heroku": "",
-    "deploy:commit": "cd deploy; [[ `git status` ]] && git add `find . -maxdepth 1 -type f` && git commit -m 'pushing updates from parent'",
-    "deploy:push": "git subtree push --prefix deploy heroku master",
+    "deploy:commit": "cd deploy; if [[ `git status --porcelain` ]]; then git add `find . -maxdepth 1 -type f` && git commit -m 'pushing updates from parent'; fi",
+    "deploy:push": "cd deploy && git push heroku master",
     "deploy": "npm run deploy:commit && npm run deploy:push"
   },
   "author": "JW",
