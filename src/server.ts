@@ -20,7 +20,6 @@ export function startServer(port: number): Express.Application {
   app.use("/", router);
 
   app.listen(port);
-  // console.log("Timestamp server listening on", port);
 
   return app;
 

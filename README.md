@@ -4,6 +4,13 @@ Very simple Express REST server implemented with TypeScript.
 
 Testing with Mocha, Chai/Expect and Fetch.
 
+Tests of the server can take a `SERVER` environment variable to allow testing of
+running servers (localor remote), e.g.,
+
+```bash
+SERVER=https://ancient-cliffs-38727.herokuapp.com npm run test
+```
+
 Git is used as the tool to sync to Heroku, but this is kept seperate from our
 source git repo (in the deploy sub-directory). This means all heroku commands need to be
 run within the deploy sub-directory (which is done automatically via the npm run commands)
@@ -12,9 +19,10 @@ run within the deploy sub-directory (which is done automatically via the npm run
 
 * DONE Git checkin
 * DONE Add tests
-* Get Heroku working again
-* Trim node_modules and typings
+* DOME Get Heroku working again
+* DONE Trim node_modules and typings
 * watch video
+* Remove return value from server.ts?
 * Check date format output
 * Add / page statically served
 * Submit to fcc
