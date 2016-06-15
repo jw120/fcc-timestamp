@@ -1,4 +1,5 @@
-// Parsing logic for the timestamp application
+/** Parsing logic for the timestamp application */
+
 // Note that our API works is defined in seconds since the epoch, but the node Date
 // function uses milliseconds since the epoch
 

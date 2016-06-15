@@ -13,6 +13,8 @@
     "compile": "tsc",
     "test": "mocha",
     "test:watch": "npm run test -- --watch",
+    "test:build": "SERVER=http://localhost:8080 mocha test/server_spec.js",
+    "test:local": "SERVER=http://localhost:5000 mocha test/server_spec.js",
     "src-start": "node src/server.js",
     "// Build and run deployable version locally": "",
     "build:static": "for f in static/*; do cp $f deploy/${f#static/deploy-}; done",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "isomorphic-fetch": "^2.2.1",
     "mocha": "^2.5.3",
     "tslint": "next",
     "typescript": "next"
