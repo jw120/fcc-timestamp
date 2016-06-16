@@ -2,9 +2,7 @@
 
 Very simple Express REST server implemented with TypeScript.
 
-Testing with Mocha, Chai/Expect and Fetch.
-
-Tests of the server can take a `SERVER` environment variable to allow testing of
+Testing with Mocha, Chai/Expect and Fetch. Tests of the server can take a `SERVER` environment variable to allow testing of
 running servers (localor remote), e.g.,
 
 ```bash
@@ -15,16 +13,21 @@ Git is used as the tool to sync to Heroku, but this is kept seperate from our
 source git repo (in the deploy sub-directory). This means all heroku commands need to be
 run within the deploy sub-directory (which is done automatically via the npm run commands)
 
+Note that the challenge does not given any specification for the format of a natural date that we are supposed to accept, so we just use
+whatever the standard javascript Date constructor provides.
+
 ## TODO
 
 * DONE Git checkin
 * DONE Add tests
 * DOME Get Heroku working again
 * DONE Trim node_modules and typings
-* watch video
-* Remove return value from server.ts?
-* Check date format output
-* Add / page statically served
+* DONE watch video
+* TODO ? Remove return value from server.ts?
+* TODO Check date format output
+* TODO ally served
+* Decide on static file to serve
+* Add test for static file
 * Submit to fcc
 
 ## Ways to run

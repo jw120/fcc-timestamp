@@ -18,6 +18,10 @@ describe("parse", () => {
     expect(parse(undefined)).to.deep.equal(nullTS);
   });
 
+  it("Returns nulls for a non-date input", () => {
+    expect(parse("not a date")).to.deep.equal(nullTS);
+  });
+
   it("Matches given natural example", () => {
     expect(parse("December 15, 2015")).to.deep.equal(exampleTS);
   });
