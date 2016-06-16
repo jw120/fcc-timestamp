@@ -5,6 +5,7 @@ import * as fetch from "isomorphic-fetch";
 import * as chai from "chai";
 import { Server } from "http";
 
+import { promiseAssert } from "./promiseAssert";
 import { startServer } from "../src/server";
 import { ParsedTimestamp } from "../src/timestamp";
 
@@ -173,25 +174,3 @@ describe("Server tests",  () => {
 
 });
 
-// Helper which create a function which applies the callback after promise resolves and applying the assertion to the result
-// function promiseAssertion<T>(p: Promise<T>, assertion: ((x: T) => void)): ((d: MochaDone) => void) {
-//   console.log(">>>pA");
-//   return function(done: MochaDone): void {
-//     p.then((val: T) => {
-//       assertion(val);
-//       done();
-//     }).catch((err: any) => {
-//       done(err);
-//     });
-//   };
-// }
-
-// Helper to run an assertion on the fuflfilled promise
-function promiseAssert<T>(p: Promise<T>, done: MochaDone, assertion: ((x: T) => void)): void {
-  p.then((val: T) => {
-    assertion(val);
-    done();
-  }).catch((err: any) => {
-    done(err);
-  });
-}
