@@ -24,9 +24,10 @@ whatever the standard javascript Date constructor provides.
 * Done Trim node_modules and typings
 * Done watch video
 * TODO Check date format output
-* TODO Should we use mocha.before/after - and close the server?
+* Done Should we use mocha.before/after - and close the server?
 * Done Decide on static file to serve
 * TODO Add styles to root.html
+* TODO PromiseAssertion in sep file
 * Done Add test for static file
 * Submit to fcc
 

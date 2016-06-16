@@ -1,11 +1,12 @@
 /** Provides function to create and start an Express server */
 
 import * as Express from "express";
+import { Server } from "http";
 
 import { parse } from "./timestamp";
 
 /** Create and start a timestamp server on the given port (which is returned) */
-export function startServer(port: number): Express.Application {
+export function startServer(port: number): Server {
 
   const app: Express.Application = Express();
 
@@ -25,8 +26,6 @@ export function startServer(port: number): Express.Application {
 
   app.use("/", router);
 
-  app.listen(port);
-
-  return app;
+  return app.listen(port);
 
 }
