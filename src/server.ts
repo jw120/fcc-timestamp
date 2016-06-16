@@ -11,7 +11,6 @@ export function startServer(port: number): Express.Application {
 
   const router: Express.Router = Express.Router();
   router.get("/", function (req: Express.Request, res: Express.Response): void {
-    console.log("In get /");
     let sendFileOptions: any = {
       root: __dirname
     };

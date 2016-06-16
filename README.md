@@ -11,23 +11,23 @@ SERVER=https://ancient-cliffs-38727.herokuapp.com npm run test
 
 Git is used as the tool to sync to Heroku, but this is kept seperate from our
 source git repo (in the deploy sub-directory). This means all heroku commands need to be
-run within the deploy sub-directory (which is done automatically via the npm run commands)
+run within the deploy sub-directory (which is Done automatically via the npm run commands)
 
 Note that the challenge does not given any specification for the format of a natural date that we are supposed to accept, so we just use
 whatever the standard javascript Date constructor provides.
 
-## TODO
+## Actions
 
-* DONE Git checkin
-* DONE Add tests
-* DOME Get Heroku working again
-* DONE Trim node_modules and typings
-* DONE watch video
-* TODO ? Remove return value from server.ts?
+* Done Git checkin
+* Done Add tests
+* Done Get Heroku working again
+* Done Trim node_modules and typings
+* Done watch video
 * TODO Check date format output
-* TODO ally served
-* Decide on static file to serve
-* Add test for static file
+* TODO Should we use mocha.before/after - and close the server?
+* Done Decide on static file to serve
+* TODO Add styles to root.html
+* Done Add test for static file
 * Submit to fcc
 
 ## Ways to run

@@ -88,7 +88,8 @@ describe(rootUrl + "/", () => {
     fetch(rootUrl)
       .then((res: IResponse) => res.text());
   it("returns expected html result", promiseAssertion(p, (t: string): void => {
-    chai.expect(t).to.equal("test TBD");
+    const snippet: string = "<h1>FreeCodeCamp Back End Exercise: Timestamp Microservice</h1>";
+    chai.expect(t).to.contain(snippet);
   }));
 
 });
