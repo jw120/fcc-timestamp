@@ -20,9 +20,6 @@ export function startServer(port: number): Server {
   router.get("/:input", function(req: Express.Request, res: Express.Response): void {
     res.send(parse(req.params.input));
   });
-  router.get("/:input", function(req: Express.Request, res: Express.Response): void {
-    res.send("");
-  });
 
   app.use("/", router);
 
