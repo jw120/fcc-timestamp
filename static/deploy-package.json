@@ -7,7 +7,7 @@
   },
   "repository": {
   },
-  "author": "Blake Johnston",
+  "author": "JW",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4"
