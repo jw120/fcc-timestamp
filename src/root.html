@@ -9,11 +9,21 @@
     <title>FreeCodeCamp Timestamp Microservice Exercise</title>
 
     <!-- Not using a css file to simplify the static file serving -->
+    <!-- Styles to look somewhat like github's rendering of README.md files -->
     <style type="text/css">
 
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 1.4;
             margin: 25px;
+        }
+
+        pre {
+            padding: 16px;
+            font-size: 85%;
+            background-color: #f7f7f7;
+            font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
 
         .footer {
@@ -55,7 +65,9 @@
 
 <p>
 Both of these examples are expected to return
-<code>{"unix":1450137600,"natural":"December 15, 2015"}</code>
+<pre>
+{"unix":1450137600,"natural":"December 15, 2015"}
+</pre>
 </p>
 
 
